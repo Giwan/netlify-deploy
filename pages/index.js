@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles, { customerValue } from "../styles/Home.module.css";
 import ActionComponent from "../components/ActionComponent/ActionComponent";
+import Footer from "../components/Footer/Footer";
 
 export default function Home() {
     return (
@@ -21,7 +22,7 @@ export default function Home() {
                 <h1 className={styles.title}>Will it open in an iFrame?</h1>
                 <article className={styles.article}>
                     <p>
-                        Not every site will work in an iFrame! The site owner
+                        Not every site will work in an iFrame! Site owners
                         can turn iFrames off. Good browsers will comply and show
                         an error message.
                     </p>
@@ -33,6 +34,7 @@ export default function Home() {
                 </article>
             </main>
             <ActionComponent />
+            <Footer />
         </div>
     );
 }

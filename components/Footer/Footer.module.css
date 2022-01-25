@@ -1,0 +1,11 @@
+.footerContainer {
+    color: var(--color-dark);
+    font-size: var(--font-size-small);
+    margin: calc(2 * var(--unit)) 0;
+    line-height: 1.2em;
+    opacity: 0.75;
+}
+
+.rightsCopy {
+    text-align: right;
+}
