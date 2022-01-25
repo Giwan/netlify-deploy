@@ -11,12 +11,25 @@
 }
 
 .title {
-  font-size: 48px;
+  font-size: var(--font-size-large);
 }
 
 .article {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--unit);
-  color: #292929;
+  gap: calc(var(--unit) * 2);
+  color: var(--color-dark);
+}
+
+.customerValue {
+  font-size: var(--font-size-large);
+  line-height: 1.2em;
+  font-weight: 600;
+  color: var(--color-white);
+  /* opacity: 0.5; */
+}
+
+.customerValue > strong {
+  opacity: 1;
+  color: papayawhip;
+  color: orangered;
+  color: #57625d;
 }
