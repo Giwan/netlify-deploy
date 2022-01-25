@@ -21,4 +21,20 @@
     padding: var(--unit);
     border: none;
     border-radius: calc(var(--unit) / 2);
+    width: 100%;
+    height: calc(4 * var(--unit));
+    font-size: var(--font-size);
+}
+
+.sandboxButton {
+    display: flex;
+    place-content: center;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    padding: var(--unit);
+    border: none;
+    border-radius: calc(var(--unit) / 2);
+    width: 100%;
+    height: calc(4 * var(--unit));
+    font-size: var(--font-size);
 }

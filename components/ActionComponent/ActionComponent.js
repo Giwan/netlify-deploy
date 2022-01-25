@@ -1,4 +1,4 @@
-import { actionContainer, apiButton, section } from "./ActionComponent.module.css";
+import { actionContainer, apiButton, section, sandboxButton } from "./ActionComponent.module.css";
 
 const ActionComponent = function () {
     return (
@@ -11,7 +11,7 @@ const ActionComponent = function () {
             <section className={section}>
                 <header>Manual</header>
                 <p>The sandbox let’s you load a given site directly into an iFrame. See detailed header information why the give site is not blocked or not.</p>
-                <a href="/sandbox">Sandbox</a>
+                <a href="/sandbox" className={sandboxButton}>Sandbox</a>
             </section>
         </div>
     )
