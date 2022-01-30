@@ -1,0 +1,6 @@
+.apiInfoStyle {
+    /* border: 1px solid var(--color-dark); */
+    font-family: "Courier New", Courier, monospace;
+    padding: var(--unit);
+    border-radius: 0 calc(var(--unit) / 2);
+}

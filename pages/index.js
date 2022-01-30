@@ -23,9 +23,9 @@ export default function Home() {
                 <h1 className={styles.title}>Will it open in an iFrame?</h1>
                 <article className={styles.article}>
                     <p>
-                        Not every site will work in an iFrame! Site owners
-                        can turn iFrames off. Good browsers will comply and show
-                        an error message.
+                        Not every site will work in an iFrame! Site owners can
+                        turn iFrames off. Good browsers will comply and show an
+                        error message.
                     </p>
                     <p className={customerValue}>
                         Use this service to <strong>pre-check</strong> if the

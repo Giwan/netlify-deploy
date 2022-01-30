@@ -1,0 +1,10 @@
+[build]
+  functions = "functions"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Access = "*"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "*"
+    Access-Control-Allow-Methods = "GET, OPTIONS"
