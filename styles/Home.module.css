@@ -3,13 +3,6 @@
     margin: 0 auto;
 }
 
-.iconTitle {
-    color: var(--color-white);
-    text-transform: uppercase;
-    border-bottom: 1px solid white;
-    display: inline-block;
-}
-
 .title {
     font-size: var(--font-size-large);
 }

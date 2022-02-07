@@ -1,50 +1,42 @@
-import { useState, useEffect } from "react";
-import { apiInfoStyle } from "./APIInfo.module.css";
+import { textAreaStyle, infoContainer, urlMessage, apiInfoTitle, apiResult, apiStatusContainer } from "./APIInfo.module.css";
 
-const iframeService = (function () {
-    return function () {
-        return {
-            async getIframeStatus(url) {
-                try {
-                    const response = await fetch(
-                        "/.netlify/functions/isiframe?url=" + url
-                    );
-                    if (!response.ok) {
-                        throw new Error("Failed to reach isIframe end-point");
-                    }
-                    return await response.json();
-                } catch (e) {
-                    console.error(e.message);
-                }
-            },
-        };
-    };
-})();
-
-const APIInfo = function ({ url }) {
-    const apiInfoData = {
-        url: "https://mytoori.com",
-        iframe: false,
-    };
-
-    const [_apiInfoData, setApiInfoData] = useState({});
-
-    const checkIfIframeIsAllowed = async () => {
-        if (/iframe\.html/i.test(url)) return;
-        const iframeStatus = await iframeService().getIframeStatus(url);
-        setApiInfoData(iframeStatus);
-    };
-
-    useEffect(() => {
-        checkIfIframeIsAllowed();
-    }, [url]);
-
+const hasUrl = function(url) {
     return (
-        <div>
-            <h2>API Info</h2>
-            <code className={apiInfoStyle}>{JSON.stringify(_apiInfoData)}</code>
+        !url || /iframe\.html/i.test(url)
+    )
+}
+
+
+const APIInfo = function ({ url, apiInfoData }) {
+    return (
+        <div className={infoContainer}>
+            <ApiStatus {...{apiInfoData}} />
+            <ApiResult {...{ apiInfoData, url }} />
         </div>
     );
 };
 
 export default APIInfo;
+
+const icons = ["❌", "👍"];
+
+const ApiStatus = function({ apiInfoData }) {
+    return (
+        <div className={apiStatusContainer}>
+            <h3 className={apiInfoTitle}>API Response</h3>
+            <div>{icons[Number(apiInfoData?.iframe)]}</div>
+        </div>
+    )
+}
+
+const iframeOptions = ["URL blocked from iFrame", "URL can be loaded in an iFrame"];
+
+const ApiResult = function ({ apiInfoData, url }) {
+    if (hasUrl(url)) return null;
+    return (
+        <div className={apiResult}>
+            <textarea className={textAreaStyle} value={JSON.stringify(apiInfoData)} disabled={true}></textarea>
+            <div className={urlMessage}>{iframeOptions[Number(apiInfoData.iframe)]}</div>
+        </div>
+    )
+}

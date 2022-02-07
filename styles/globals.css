@@ -2,14 +2,18 @@
     --unit: 16px;
 
     --color-white: whitesmoke;
+    --color-black: #111111;
     --color-dark: #4b514e;
     --color-dark-2: #57625d;
     --color-accent: #e96200;
+    --color-dark-3: #292929;
 
     /* font */
     --font-size: 24px;
     --font-size-small: 18px;
     --font-size-large: 48px;
+
+    --header-height-2: 54px;
 }
 
 html,
@@ -33,7 +37,7 @@ a {
 }
 
 h1 {
-    color: white;
+    color: var(--color-white);
 }
 
 h2 {

@@ -3,6 +3,7 @@ import styles, { customerValue } from "../styles/Home.module.css";
 import ActionComponent from "../components/ActionComponent/ActionComponent";
 import Footer from "../components/Footer/Footer";
 import HowItWorks from "../components/Explanation/HowItWorks";
+import SiteTitle from "../components/SiteTitle/SiteTitle";
 
 export default function Home() {
     return (
@@ -19,7 +20,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                <h6 className={styles.iconTitle}>iFrame Service</h6>
+                <SiteTitle />
                 <h1 className={styles.title}>Will it open in an iFrame?</h1>
                 <article className={styles.article}>
                     <p>

@@ -7,6 +7,13 @@ import {
     browserButton,
 } from "./Browser.module.css";
 
+export const prefixHTTPS = (url, isSSL) => {
+    url = url.replace(/^http:/, "https:");
+    if (/^https:\/\//i.test(url)) return url;
+    if (isSSL) return "https://"+url;
+    return "https://"+url;
+}
+
 const getSearchParamUrl = function (url) {
     const searchParams = new URLSearchParams(window.location.search);
     const qUrl = searchParams.get("url");
@@ -30,7 +37,10 @@ const Browser = function ({ url = "iframe.html", setIframeUrl, iframeUrl }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIframeUrl(_url);
+        if (/iframe\.html/i.test(_url)) return;
+        const url = prefixHTTPS(_url);
+        setIframeUrl(url);
+        setUrl(url);
     };
     
     return (
