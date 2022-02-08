@@ -6,6 +6,7 @@ import {
     addressBar,
     browserButton,
 } from "./Browser.module.css";
+import { hasUrl } from "../componentHelpers";
 
 export const prefixHTTPS = (url, isSSL) => {
     url = url.replace(/^http:/, "https:");
@@ -37,7 +38,7 @@ const Browser = function ({ url = "iframe.html", setIframeUrl, iframeUrl }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (/iframe\.html/i.test(_url)) return;
+        if (hasUrl(_url)) return;
         const url = prefixHTTPS(_url);
         setIframeUrl(url);
         setUrl(url);

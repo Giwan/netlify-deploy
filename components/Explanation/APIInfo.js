@@ -1,10 +1,5 @@
 import { textAreaStyle, infoContainer, urlMessage, apiInfoTitle, apiResult, apiStatusContainer } from "./APIInfo.module.css";
-
-const hasUrl = function(url) {
-    return (
-        !url || /iframe\.html/i.test(url)
-    )
-}
+import { hasUrl } from "../componentHelpers";
 
 
 const APIInfo = function ({ url, apiInfoData }) {
@@ -36,7 +31,7 @@ const ApiResult = function ({ apiInfoData, url }) {
     return (
         <div className={apiResult}>
             <textarea className={textAreaStyle} value={JSON.stringify(apiInfoData)} disabled={true}></textarea>
-            <div className={urlMessage}>{iframeOptions[Number(apiInfoData.iframe)]}</div>
+            <div className={urlMessage}>{iframeOptions[Number(apiInfoData?.iframe)]}</div>
         </div>
     )
 }
