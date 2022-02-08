@@ -4,6 +4,7 @@ import Browser from "../components/Browser/Browser";
 import APIInfo from "../components/Explanation/APIInfo";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
 // import Report from "../components/Report/Report";
+import Link from "next/link";
 
 const iframeService = (function () {
     return function () {
@@ -30,7 +31,7 @@ const Sandbox = function () {
     const [_apiInfoData, setApiInfoData] = useState({});
 
     const handleUrlChange = (url) => {
-        setIframeUrl(url); 
+        setIframeUrl(url);
         checkIfIframeIsAllowed(url);
     }
 
@@ -44,7 +45,10 @@ const Sandbox = function () {
         <div className={sandboxContainer}>
             <header className={sandboxHeader}>
                 <SiteTitle />
-                <button className={sandboxCloseButton}>+</button>
+                <Link href="/">
+                    <a className={sandboxCloseButton}>+</a>
+                </Link>
+
             </header>
             <APIInfo {...{ url: iframeUrl, apiInfoData: _apiInfoData }} />
             <Browser {...{ setIframeUrl: handleUrlChange, iframeUrl }} />
