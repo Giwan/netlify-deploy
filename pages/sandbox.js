@@ -5,6 +5,7 @@ import APIInfo from "../components/Explanation/APIInfo";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
 // import Report from "../components/Report/Report";
 import Link from "next/link";
+import { prefixHTTPS } from "../components/componentHelpers";
 
 const iframeService = (function () {
     return function () {
@@ -31,8 +32,9 @@ const Sandbox = function () {
     const [_apiInfoData, setApiInfoData] = useState({});
 
     const handleUrlChange = (url) => {
-        setIframeUrl(url);
-        checkIfIframeIsAllowed(url);
+        const _url = prefixHTTPS(url);
+        setIframeUrl(_url);
+        checkIfIframeIsAllowed(_url);
     }
 
     const checkIfIframeIsAllowed = async (url) => {
@@ -50,7 +52,7 @@ const Sandbox = function () {
                 </Link>
 
             </header>
-            <APIInfo {...{ url: iframeUrl, apiInfoData: _apiInfoData }} />
+            <APIInfo {...{ url: iframeUrl, apiInfoData: _apiInfoData, handleUrlChange }} />
             <Browser {...{ setIframeUrl: handleUrlChange, iframeUrl }} />
             {/* <Report /> */}
         </div>

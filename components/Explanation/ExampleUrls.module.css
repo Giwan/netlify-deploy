@@ -1,0 +1,20 @@
+.examplesContainer {
+    padding: 0 var(--unit);
+}
+
+.button {
+    border: 0;
+    padding: var(--unit);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    margin-bottom: var(--unit);
+}
+
+.buttonList {
+    display: flex;
+    flex-direction: column;
+}
+
+.exampleTitle {
+    color: var(--color-white);
+}

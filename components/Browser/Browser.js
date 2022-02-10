@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     browserContainer,
     iframe,
@@ -6,30 +6,11 @@ import {
     addressBar,
     browserButton,
 } from "./Browser.module.css";
-import { hasUrl } from "../componentHelpers";
+import { hasUrl, prefixHTTPS } from "../componentHelpers";
 
-export const prefixHTTPS = (url, isSSL) => {
-    url = url.replace(/^http:/, "https:");
-    if (/^https:\/\//i.test(url)) return url;
-    if (isSSL) return "https://"+url;
-    return "https://"+url;
-}
+const Browser = function ({ setIframeUrl, iframeUrl: url = "" }) {
 
-const getSearchParamUrl = function (url) {
-    const searchParams = new URLSearchParams(window.location.search);
-    const qUrl = searchParams.get("url");
-    return qUrl || url;
-};
-
-const Browser = function ({ url = "iframe.html", setIframeUrl, iframeUrl }) {
-    const [_url, setUrl] = useState(url);
-
-    const updateUrl = () => {
-        setUrl(getSearchParamUrl(url));
-        setIframeUrl(getSearchParamUrl(url));
-    };
-
-    useEffect(updateUrl, []);
+    const [ _url, setUrl ] = useState(url);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -50,14 +31,14 @@ const Browser = function ({ url = "iframe.html", setIframeUrl, iframeUrl }) {
                 <button className={browserButton}>Reload</button>
                 <input
                     type="text"
-                    value={_url}
+                    value={_url || url}
                     onChange={handleChange}
                     className={addressBar}
                     placeholder="https://mytoori.com"
                 />
                 <button className={browserButton}>Go</button>
             </form>
-            <IframeComponent {...{ iframeUrl }} />
+            <IframeComponent {...{ iframeUrl: url }} />
         </div>
     );
 };
