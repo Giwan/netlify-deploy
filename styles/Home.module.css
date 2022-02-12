@@ -1,10 +1,12 @@
 .homeContainer {
-    width: 900px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: var(--unit);
 }
 
 .title {
-    font-size: var(--font-size-large);
+    line-height: 1.1em;
+    font-size: var(--font-size);
 }
 
 .article {
@@ -12,8 +14,13 @@
     color: var(--color-dark);
 }
 
-.customerValue {
-    font-size: var(--font-size-large);
+.article > p {
+    font-size: var(--font-size);
+    line-height: 1.3em;
+}
+
+.article > p.customerValue {
+    font-size: 1.2em;
     line-height: 1.2em;
     font-weight: 600;
     color: var(--color-white);
@@ -25,4 +32,15 @@
     color: papayawhip;
     color: orangered;
     color: #57625d;
+}
+
+
+@media (min-width: 700px) {
+    .title {
+        font-size: var(--font-size-large);
+    }
+
+    .article > p.customerValue {
+        font-size: var(--font-size-large);
+    }
 }

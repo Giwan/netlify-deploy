@@ -4,15 +4,25 @@
     border-radius: 4px;
     padding: var(--unit);
     display: flex;
+    flex-direction: column;
     margin: calc(var(--unit) * 4) 0;
+    margin-bottom: var(--unit);
 }
 
 .actionContainer header {
     color: var(--color-white);
 }
 
+.actionContainer p {
+    font-size: var(--font-size-small);
+}
+
 .section:first-child {
     margin-right: var(--unit);
+}
+
+.section:last-child {
+    margin-top: var(--unit);
 }
 
 .apiButton {
@@ -38,4 +48,21 @@
     height: calc(4 * var(--unit));
     font-size: var(--font-size);
     text-decoration: none;
+}
+
+@media (min-width: 700px) {
+    .actionContainer p {
+        font-size: var(--font-size);
+    }
+
+}
+
+@media (min-width: 500px) {
+    .actionContainer {
+        flex-direction: row;
+    }
+
+    .section:last-child {
+        margin-top: 0;
+    }
 }

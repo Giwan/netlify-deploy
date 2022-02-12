@@ -4,6 +4,7 @@
     margin: calc(2 * var(--unit)) 0;
     line-height: 1.2em;
     opacity: 0.75;
+    margin-bottom: calc(var(--unit) * 4);
 }
 
 .rightsCopy {

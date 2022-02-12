@@ -14,6 +14,8 @@
     --font-size-large: 48px;
 
     --header-height-2: 54px;
+
+    --tablet-break: 700px;
 }
 
 html,

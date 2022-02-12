@@ -1,0 +1,13 @@
+.howItWorksContainer {
+    margin-top: calc(var(--unit) * 4);
+}
+
+.howItWorksContainer p {
+    line-height: 1.6em;
+}
+
+@media (min-width: 700px) {
+    .howItWorksContainer p {
+        line-height: 1.25em;
+    }   
+}

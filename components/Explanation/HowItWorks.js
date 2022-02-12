@@ -1,8 +1,10 @@
+import { howItWorksContainer } from "./HowItWorks.module.css";
+
 const HowItWorks = function () {
     return (
-        <article>
+        <article className={howItWorksContainer}>
             <header>
-                <h2>Checking the request headers</h2>
+                <h2>Checking request headers</h2>
             </header>
             <p>
                 A site owner can use the request headers to indicate if their
