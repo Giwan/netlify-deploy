@@ -1,0 +1,37 @@
+.quickStartContainer {
+    padding: var(--unit);
+    max-width: var(--page-width);
+    margin: 0 auto;
+}
+
+.urlParameter {
+    color: var(--color-white);
+}
+
+.apiUrl {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--unit);
+    border-radius: calc(var(--unit) / 4);
+}
+
+.apiUrl span {
+    color: var(--color-accent);
+    
+}
+
+.buttonContainer {
+    margin-top: var(--unit);
+    border-top: 1px solid var(--color-dark);
+}
+
+.toggleExampleButton {
+    padding: var(--unit);
+    margin: var(--unit);
+    margin-left: 0;
+    border: 0;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: var(--font-size);
+    border-radius: var(--unit);
+}

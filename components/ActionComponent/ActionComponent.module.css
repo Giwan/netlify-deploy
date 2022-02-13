@@ -34,6 +34,9 @@
     width: 100%;
     height: calc(4 * var(--unit));
     font-size: var(--font-size);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .sandboxButton {

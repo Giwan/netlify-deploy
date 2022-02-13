@@ -4,6 +4,7 @@ import {
     section,
     sandboxButton,
 } from "./ActionComponent.module.css";
+import Link from "next/link";
 
 const ActionComponent = function () {
     return (
@@ -15,7 +16,12 @@ const ActionComponent = function () {
                     object back indicating if the site can be opened in an
                     iFrame or not.{" "}
                 </p>
-                <button className={apiButton}>API Quick Start</button>
+                <Link href="/quick-start">
+
+                    <a className={apiButton}>
+                        API Quick Start
+                    </a>
+                </Link>
             </section>
             <section className={section}>
                 <header>Manual</header>
@@ -24,9 +30,11 @@ const ActionComponent = function () {
                     iFrame. See detailed header information why the give site is
                     not blocked or not.
                 </p>
-                <a href="/sandbox" className={sandboxButton}>
-                    Demo
-                </a>
+                <Link href="/sandbox">
+                    <a className={sandboxButton}>
+                        Demo
+                    </a>
+                </Link>
             </section>
         </div>
     );
