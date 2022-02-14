@@ -13,6 +13,7 @@
     color: var(--color-white);
     padding: var(--unit);
     border-radius: calc(var(--unit) / 4);
+    overflow-x: scroll;
 }
 
 .apiUrl span {
@@ -35,3 +36,14 @@
     font-size: var(--font-size);
     border-radius: var(--unit);
 }
+
+@media (max-width: 450px) {
+
+    .quickStartContainer {
+        font-size: var(--font-size-small);
+    }
+
+    .quickStartContainer .apiUrl code {
+        font-size: var(--font-size-small);
+    }
+} 

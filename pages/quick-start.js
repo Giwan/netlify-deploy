@@ -14,7 +14,7 @@ const responses = [
     }
 ]
 
-export default function () {
+const QuickStart = function () {
     const [ position, setPosition ] = useState(0);
 
     const handleClick = () => {
@@ -60,3 +60,5 @@ export default function () {
 
     )
 }
+
+export default QuickStart;

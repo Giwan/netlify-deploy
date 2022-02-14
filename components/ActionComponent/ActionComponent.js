@@ -13,8 +13,8 @@ const ActionComponent = function () {
                 <header>Automation</header>
                 <p>
                     Use the API from your existing app. You’ll receive a JSON
-                    object back indicating if the site can be opened in an
-                    iFrame or not.{" "}
+                    object indicating if the site will load in an
+                    iFrame.
                 </p>
                 <Link href="/quick-start">
 
@@ -27,8 +27,8 @@ const ActionComponent = function () {
                 <header>Manual</header>
                 <p>
                     The sandbox let’s you load a given site directly into an
-                    iFrame. See detailed header information why the give site is
-                    not blocked or not.
+                    iFrame. See detailed header information if the given site is
+                    blocked.
                 </p>
                 <Link href="/sandbox">
                     <a className={sandboxButton}>
