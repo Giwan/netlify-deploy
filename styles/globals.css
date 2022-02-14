@@ -28,6 +28,8 @@ body {
     font-size: var(--font-size);
     line-height: 1.35em;
     background-color: #b1c7bc;
+    height: 100vh;
+    width: 100vw;
 }
 
 a {
@@ -49,4 +51,9 @@ h2 {
 
 p {
     color: var(--color-dark-2);
+}
+
+div#__next {
+    height: 100%;
+    width: 100%;
 }

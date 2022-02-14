@@ -8,6 +8,7 @@
     color: var(--color-white);
     background-color: var(--color-black);
     margin-bottom: var(--unit);
+    font-size: var(--font-size);
 }
 
 .buttonList {
@@ -17,4 +18,23 @@
 
 .exampleTitle {
     color: var(--color-white);
+}
+
+@media (max-width: 700px) {
+
+    .exampleTitle {
+        font-size: var(--font-size-small);
+        display: inline-block;
+    }
+
+    .buttonList {
+        margin-left: var(--unit);
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .button {
+        font-size: var(--font-size-small);
+    }
+
 }

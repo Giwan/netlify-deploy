@@ -32,7 +32,7 @@ const ActionComponent = function () {
                 </p>
                 <Link href="/sandbox">
                     <a className={sandboxButton}>
-                        Demo
+                        Demo / Sandbox
                     </a>
                 </Link>
             </section>

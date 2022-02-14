@@ -3,7 +3,6 @@ import { sandboxContainer, sandboxHeader, sandboxCloseButton } from "../styles/S
 import Browser from "../components/Browser/Browser";
 import APIInfo from "../components/Explanation/APIInfo";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
-// import Report from "../components/Report/Report";
 import Link from "next/link";
 import { prefixHTTPS } from "../components/componentHelpers";
 
@@ -54,7 +53,6 @@ const Sandbox = function () {
             </header>
             <APIInfo {...{ url: iframeUrl, apiInfoData: _apiInfoData, handleUrlChange }} />
             <Browser {...{ setIframeUrl: handleUrlChange, iframeUrl }} />
-            {/* <Report /> */}
         </div>
     );
 };

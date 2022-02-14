@@ -1,5 +1,6 @@
 .homeContainer {
     max-width: var(--page-width);
+    height: 100%;
     margin: 0 auto;
     padding: var(--unit);
 }

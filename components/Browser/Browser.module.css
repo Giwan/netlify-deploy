@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: calc(var(--header-height-2) - 0px) auto;
     min-height: 400px;
+    height: 100%;
 }
 
 .browserHeader {
@@ -35,4 +36,19 @@
     padding: 0;
     margin: 0;
     border-left: 1px solid var(--color-black);
+}
+
+@media (max-width: 700px) {
+
+    .addressBar {
+        font-size: var(--font-size-small);
+        padding: 0 calc(var(--unit) /2);
+
+    }
+
+    .browserContainer {
+        height: calc(100% - 274px);
+        min-height: initial;
+        font-size: var(--font-size-small);
+    }
 }

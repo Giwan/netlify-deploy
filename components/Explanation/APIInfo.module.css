@@ -54,3 +54,16 @@
     margin-top: calc(var(--unit) * 2);
     color: var(--color-white);
 }
+
+@media (max-width: 700px) {
+
+    .textAreaStyle {
+        font-size: var(--font-size-small);
+        height: initial;
+    }
+    .urlMessage {
+        font-size: var(--font-size-small);
+        margin-top: calc(var(--unit));
+    }
+
+}
