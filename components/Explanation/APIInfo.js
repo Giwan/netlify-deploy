@@ -1,14 +1,17 @@
 import { textAreaStyle, infoContainer, urlMessage, apiInfoTitle, apiResult, apiStatusContainer } from "./APIInfo.module.css";
 import { hasUrl } from "../componentHelpers";
 import ExampleUrls from "./ExampleUrls";
+import Reset from "./Reset";
 
 
 const APIInfo = function ({ url, apiInfoData, handleUrlChange }) {
+    
     return (
         <div className={infoContainer}>
             <ApiStatus {...{apiInfoData}} />
             <ApiResult {...{ apiInfoData, url }} />
             <ExampleUrls {...{url, handleUrlChange }} />
+            <Reset {...{ url, handleUrlChange}} />
         </div>
     );
 };

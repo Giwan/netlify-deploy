@@ -1,0 +1,6 @@
+.resetButton {
+    padding: var(--unit);
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border: 0;
+}
