@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { sandboxContainer, sandboxHeader, sandboxCloseButton } from "../styles/Sandbox.module.css";
+import {
+    sandboxContainer,
+    sandboxHeader,
+    sandboxCloseButton,
+} from "../styles/Sandbox.module.css";
 import Browser from "../components/Browser/Browser";
 import APIInfo from "../components/Explanation/APIInfo";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
@@ -34,7 +38,7 @@ const Sandbox = function () {
         const _url = prefixHTTPS(url);
         setIframeUrl(_url);
         checkIfIframeIsAllowed(_url);
-    }
+    };
 
     const checkIfIframeIsAllowed = async (url) => {
         if (/iframe\.html/i.test(url)) return;
@@ -49,9 +53,14 @@ const Sandbox = function () {
                 <Link href="/">
                     <a className={sandboxCloseButton}>+</a>
                 </Link>
-
             </header>
-            <APIInfo {...{ url: iframeUrl, apiInfoData: _apiInfoData, handleUrlChange }} />
+            <APIInfo
+                {...{
+                    url: iframeUrl,
+                    apiInfoData: _apiInfoData,
+                    handleUrlChange,
+                }}
+            />
             <Browser {...{ setIframeUrl: handleUrlChange, iframeUrl }} />
         </div>
     );

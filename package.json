@@ -8,6 +8,8 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:cover": "jest --coverage",
+    "test:ci": "jest --ci",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -26,6 +28,7 @@
     "eslint-config-next": "^12.0.10",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "prop-types": "^15.8.1"
   }
 }

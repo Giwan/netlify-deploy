@@ -1,4 +1,4 @@
-const Report = function() {
+const Report = function () {
     return (
         <div>
             <h2>Report</h2>
@@ -10,7 +10,7 @@ const Report = function() {
                 </th>
             </table>
         </div>
-    )
-}
+    );
+};
 
 export default Report;

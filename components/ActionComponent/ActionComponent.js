@@ -13,12 +13,10 @@ const ActionComponent = function () {
                 <header>Automation</header>
                 <p>
                     Use the API from your existing app. You’ll receive a JSON
-                    object indicating if the site will load in an
-                    iFrame.
+                    object indicating if the site will load in an iFrame.
                 </p>
                 <Link href="/quick-start">
-
-                    <a className={apiButton}>
+                    <a className={apiButton} title="quick start guide">
                         API Quick Start
                     </a>
                 </Link>
@@ -31,7 +29,7 @@ const ActionComponent = function () {
                     blocked.
                 </p>
                 <Link href="/sandbox">
-                    <a className={sandboxButton}>
+                    <a className={sandboxButton} title="sandbox / demo page">
                         Demo / Sandbox
                     </a>
                 </Link>
