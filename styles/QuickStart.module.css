@@ -14,6 +14,9 @@
     padding: var(--unit);
     border-radius: calc(var(--unit) / 4);
     overflow-x: scroll;
+    margin-bottom: var(--unit);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: var(--font-size-small);
 }
 
 .apiUrl span {
@@ -34,7 +37,16 @@
     background-color: var(--color-accent);
     color: var(--color-white);
     font-size: var(--font-size);
-    border-radius: var(--unit);
+    border-radius: calc(var(--unit) / 2);
+    transition: transition .25s;
+}
+
+.toggleExampleButton:active {
+    transform: scale(0.95);
+}
+
+.checkItLink {
+    margin-top: var(--unit);
 }
 
 @media (max-width: 450px) {
