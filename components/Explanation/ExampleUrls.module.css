@@ -4,11 +4,15 @@
 
 .button {
     border: 0;
-    padding: var(--unit);
+    /* padding: var(--unit); */
     color: var(--color-white);
-    background-color: var(--color-black);
+    /* background-color: var(--color-dark-3); */
+    background: none;
     margin-bottom: var(--unit);
     font-size: var(--font-size);
+    text-align: left;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .buttonList {
@@ -17,7 +21,7 @@
 }
 
 .exampleTitle {
-    color: var(--color-white);
+    color: var(--color-dark-3);
 }
 
 @media (max-width: 700px) {

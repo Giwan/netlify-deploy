@@ -2,11 +2,13 @@
     --unit: 16px;
 
     --color-white: whitesmoke;
+    --color-white-dim: #94a3b8;
     --color-black: #111111;
-    --color-dark: #4b514e;
+    --color-dark: #0F172A;
     --color-dark-2: #57625d;
     --color-accent: #e96200;
-    --color-dark-3: #292929;
+    --color-dark-3: #334155; /*    #292929; */
+    --color-blue: #4682B4;
 
     /* font */
     --font-size: 24px;
@@ -27,7 +29,7 @@ body {
         Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: var(--font-size);
     line-height: 1.35em;
-    background-color: #b1c7bc;
+    background-color: var(--color-dark);
     height: 100vh;
     width: 100vw;
 }

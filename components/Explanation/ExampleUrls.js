@@ -6,7 +6,7 @@ import {
 } from "./ExampleUrls.module.css";
 import { hasUrl } from "../componentHelpers";
 
-const urls = ["mytoori.com", "bbc.co.uk"];
+const urls = ["phys.org", "bbc.co.uk"];
 
 const ExampleUrls = function ({ url, handleUrlChange }) {
     if (!hasUrl(url)) return null;

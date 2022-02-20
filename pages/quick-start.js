@@ -3,13 +3,16 @@ import {
     quickStartContainer,
     urlParameter,
     apiUrl,
-    toggleExampleButton,
     buttonContainer,
-    checkItLink
+    checkItLink,
+    tryExamples,
+    urlList,
+    buttonList
 } from "../styles/QuickStart.module.css";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
 import Link from "next/link";
 import { domain } from "../lib/constants";
+import { filterUrl } from "../lib/utils";
 
 const responses = [
     {
@@ -20,45 +23,52 @@ const responses = [
         url: "https://bbc.co.uk/",
         iframe: false,
     },
+    {
+        url: "https://phys.org/",
+        iframe: true,
+    },
 ];
 
 const QuickStart = function () {
-    const [position, setPosition] = useState(0);
+    const [_urlObject, setUrlObject] = useState(responses[0]);
 
-    const handleClick = () => {
-        let newPosition = position + 1;
-        if (newPosition >= responses.length) newPosition = 0;
-        setPosition(newPosition);
-    };
+    const changeUrl = (newUrl) => {
+        const foundUrl = responses.find(({ url }) => {
+            const exp = new RegExp(newUrl, "i");
+            return exp.test(url);
+        });
+
+        foundUrl && setUrlObject(foundUrl);
+    }
 
     return (
         <article className={quickStartContainer}>
             <SiteTitle />
             <h1>Quick start</h1>
             <p>
-                Consuming the API is fairly easy. Call the end-point below
-                directly from your own app and provide the url you would like to
+                Consuming the API as follows. Call the end-point below
+                from your own app and provide the url you would like to
                 check.
             </p>
             <p>
                 Pass the URL parameter with{" "}
                 <code className={urlParameter}>
-                    url={responses[position].url}
+                    url={_urlObject.url}
                 </code>
             </p>
 
             <section className={apiUrl}>
                 <code>
                     {domain}/api/isiframe/?
-                    <span>url={responses[position].url}</span>
+                    <span>url={_urlObject.url}</span>
                 </code>
             </section>
             <a
                 className={checkItLink}
-                href={`${domain}/api/isiframe/?url=${responses[position].url}`}
+                href={`${domain}/api/isiframe/?url=${_urlObject.url}`}
                 target="_blank"
                 rel="noreferrer noopener"
-                alt="open API link example directly in the browser">Check it directly in the browser</a>
+                alt="open API link example directly in the browser">Open in new browser tab</a>
 
             <p>
                 Upon receiving the request, an json response is sent back
@@ -66,16 +76,33 @@ const QuickStart = function () {
             </p>
 
             <section className={apiUrl}>
-                <code>{JSON.stringify(responses[position])}</code>
+                <code>{JSON.stringify(_urlObject)}</code>
             </section>
-            <div className={buttonContainer}>
-                <button className={toggleExampleButton} onClick={handleClick}>
-                    Toggle Example
-                </button>
-                <Link href="/">
-                    <a>back</a>
-                </Link>
-            </div>
+
+            <section className={tryExamples}>
+                <h2>(Other) Examples</h2>
+                <ul className={urlList}>
+                    {responses.map(({ url }) => <li
+                        key={url}
+                        onClick={() => changeUrl(url)}>{filterUrl(url)}</li>)}
+                </ul>
+            </section>
+
+            <section className={buttonContainer}>
+                <h2>The sandbox shows API result and iFrame side by side</h2>
+                <ul className={buttonList}>
+                    <li>
+                    <Link href="/sandbox">
+                        <a>sandbox</a>
+                    </Link>
+                    </li>
+                    <li>
+                    <Link href="/">
+                        <a>back</a>
+                    </Link>
+                    </li>
+                </ul>
+            </section>
         </article>
     );
 };

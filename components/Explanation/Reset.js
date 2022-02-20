@@ -6,7 +6,7 @@ const Reset = function ({ handleUrlChange, url }) {
     if (hasUrl(url)) return null;
     return (
         <button className={resetButton} onClick={handleReset}>
-            reset
+            Reset
         </button>
     );
 };

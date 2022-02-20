@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+.quickStartContainer p {
+    color: var(--color-dark-2);
+}
+
 .urlParameter {
     color: var(--color-white);
 }
@@ -11,12 +15,13 @@
 .apiUrl {
     background-color: var(--color-dark);
     color: var(--color-white);
-    padding: var(--unit);
+    /* padding: var(--unit); */
     border-radius: calc(var(--unit) / 4);
     overflow-x: scroll;
-    margin-bottom: var(--unit);
+    margin: calc(var(--unit) *2) 0;
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--font-size-small);
+    line-height: 1em;
 }
 
 .apiUrl span {
@@ -24,29 +29,62 @@
     
 }
 
+.urlList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.urlList li {
+    margin-right: var(--unit);
+    cursor: pointer; 
+    text-decoration: underline;
+}
+
+.toggleExampleButton:active {
+    transform: scale(0.96);
+}
+
+.checkItLink {
+    margin-top: var(--unit);
+    color: var(--color-white);
+}
+
+.checkItLink:hover {
+    color: var(--color-accent);
+}
+
+.tryExamples {
+    color: var(--color-white);
+}
+
+.tryExamples h2 {
+    color: var(--color-dark-3);
+    font-size: var(--font-size);
+}
+
 .buttonContainer {
     margin-top: var(--unit);
     border-top: 1px solid var(--color-dark);
 }
 
-.toggleExampleButton {
-    padding: var(--unit);
-    margin: var(--unit);
-    margin-left: 0;
-    border: 0;
-    background-color: var(--color-accent);
-    color: var(--color-white);
+.buttonContainer h2 {
+    color: var(--color-dark-3);
     font-size: var(--font-size);
-    border-radius: calc(var(--unit) / 2);
-    transition: transition .25s;
 }
 
-.toggleExampleButton:active {
-    transform: scale(0.95);
+.buttonList {
+    padding: 0;
+    list-style: none;
+    display: flex;
 }
 
-.checkItLink {
-    margin-top: var(--unit);
+.buttonList li {
+    margin-right: var(--unit);
+}
+
+.buttonList li a {
+    color: var(--color-white);
 }
 
 @media (max-width: 450px) {

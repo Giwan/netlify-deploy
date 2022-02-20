@@ -10,6 +10,10 @@
     font-size: var(--font-size);
 }
 
+.title strong {
+    color: var(--color-dark-2);
+}
+
 .article {
     gap: calc(var(--unit) * 2);
     color: var(--color-dark);
@@ -30,9 +34,8 @@
 
 .customerValue > strong {
     opacity: 1;
-    color: papayawhip;
-    color: orangered;
-    color: #57625d;
+    /* color: orangered; */
+    color: var(--color-dark-2);
 }
 
 

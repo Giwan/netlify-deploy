@@ -36,7 +36,7 @@ const ApiStatus = function ({ apiInfoData }) {
 
 const iframeOptions = [
     "URL blocked from iFrame",
-    "URL can be loaded in an iFrame",
+    "URL will loaded in an iFrame",
 ];
 
 const ApiResult = function ({ apiInfoData, url }) {

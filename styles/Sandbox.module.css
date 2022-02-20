@@ -28,8 +28,10 @@
     margin: 0;
     padding: 0;
     transform: rotate(45deg);
-    margin-right: var(--unit);
+    transition: transform 1s;
+    margin-right: calc(var(--unit) /2);
     text-decoration: none;
+    color: var(--color-dark-3);
 }
 
 @media (max-width: 700px) {

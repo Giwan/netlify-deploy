@@ -39,7 +39,7 @@ const Browser = function ({ setIframeUrl, iframeUrl: url = "" }) {
                     inputMode="url"
                     required
                     pattern=".+\..+"
-                    placeholder="https://mytoori.com"
+                    placeholder="Enter a URL to test"
                     title="enter a valid URL here to load it into the iframe below"
                     list="defaultURLs"
                 />

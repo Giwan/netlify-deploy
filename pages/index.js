@@ -21,17 +21,16 @@ export default function Home() {
             </Head>
             <main>
                 <SiteTitle />
-                <h1 className={styles.title}>Will it open in an iFrame?</h1>
+                <h1 className={styles.title}>Will it open in an <strong>iFrame</strong>?</h1>
                 <article className={styles.article}>
                     <p>
-                        Not every site will work in an iFrame! Site owners can
-                        turn iFrames off. Good browsers will comply and show an
-                        error message.
+                        <strong>Not every site will load in an iFrame!</strong>
+                        The site owner can restrict it from being loaded in an iFrame. 
+                        Most browsers will comply. Some might show a helpful error message. 
                     </p>
                     <p className={customerValue}>
-                        Use this service to <strong>pre-check</strong> if the
-                        given <strong>URL</strong> will open in an{" "}
-                        <strong>iFrame</strong>.
+                        Use this API to <strong>pre-check</strong> if a
+                        given <strong>URL</strong> will open in an <strong>iFrame</strong>.
                     </p>
                 </article>
             </main>
