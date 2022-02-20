@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import {
     browserContainer,
@@ -24,6 +24,10 @@ const Browser = function ({ setIframeUrl, iframeUrl: url = "" }) {
         setIframeUrl(url);
         setUrl(url);
     };
+
+    useEffect(() => {
+        setUrl(url);
+    }, [url]);
 
     return (
         <div className={browserContainer}>
