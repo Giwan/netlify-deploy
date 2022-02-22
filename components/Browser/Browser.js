@@ -57,7 +57,7 @@ const Browser = function ({ setIframeUrl, iframeUrl: url = "" }) {
 
 Browser.propTypes = {
     setIframeUrl: PropTypes.func.isRequired,
-    iframeUrl: PropTypes.string.isRequired,
+    iframeUrl: PropTypes.string,
 }
 
 export default Browser;

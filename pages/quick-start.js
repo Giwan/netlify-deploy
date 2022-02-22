@@ -7,7 +7,8 @@ import {
     checkItLink,
     tryExamples,
     urlList,
-    buttonList
+    buttonList,
+    responseContainer
 } from "../styles/QuickStart.module.css";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
 import Link from "next/link";
@@ -46,12 +47,9 @@ const QuickStart = function () {
             <SiteTitle />
             <h1>Quick start</h1>
             <p>
-                Consuming the API as follows. Call the end-point below
-                from your own app and provide the url you would like to
-                check.
-            </p>
-            <p>
-                Pass the URL parameter with{" "}
+                Call the end-point below
+                from your own app and pass the URL to be
+                checked. Pass the URL parameter with{" "}
                 <code className={urlParameter}>
                     url={_urlObject.url}
                 </code>
@@ -70,17 +68,24 @@ const QuickStart = function () {
                 rel="noreferrer noopener"
                 alt="open API link example directly in the browser">Open in new browser tab</a>
 
-            <p>
-                Upon receiving the request, an json response is sent back
-                indicating if the provided URL can be loaded in an iFrame.
-            </p>
+            <section className={responseContainer}>
+                <p>
+                    A <strong>JSON</strong> response will be returned,
+                    indicating if the provided URL can be loaded in an iFrame.
+                </p>
 
-            <section className={apiUrl}>
-                <code>{JSON.stringify(_urlObject)}</code>
+                <section className={apiUrl}>
+                    <code>{JSON.stringify(_urlObject)}</code>
+                </section>
             </section>
+
+            <p>
+                Use that in your app or website to show a warning or a link to open the site in a new tab.
+            </p>
 
             <section className={tryExamples}>
                 <h2>(Other) Examples</h2>
+                <p>Click one of these to see it in the code examples above</p>
                 <ul className={urlList}>
                     {responses.map(({ url }) => <li
                         key={url}
@@ -89,16 +94,15 @@ const QuickStart = function () {
             </section>
 
             <section className={buttonContainer}>
-                <h2>The sandbox shows API result and iFrame side by side</h2>
                 <ul className={buttonList}>
                     <li>
                     <Link href="/sandbox">
-                        <a>sandbox</a>
+                        <a className="navLink" title="sandbox page">Sandbox</a>
                     </Link>
                     </li>
                     <li>
                     <Link href="/">
-                        <a>back</a>
+                        <a className="navLink" title="return to home page">Back</a>
                     </Link>
                     </li>
                 </ul>

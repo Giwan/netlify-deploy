@@ -5,10 +5,10 @@
     --color-white-dim: #94a3b8;
     --color-black: #111111;
     --color-dark: #0F172A;
-    --color-dark-2: #57625d;
+    --color-dark-2: #20bb98; /* #57625d; */
     --color-accent: #e96200;
     --color-dark-3: #334155; /*    #292929; */
-    --color-blue: #4682B4;
+    --color-blue: #1e86ff; /* #4682B4; */
 
     /* font */
     --font-size: 24px;
@@ -52,10 +52,23 @@ h2 {
 }
 
 p {
-    color: var(--color-dark-2);
+    color: var(--color-white-dim);
+    line-height: 1.5em;
 }
 
 div#__next {
     height: 100%;
     width: 100%;
+}
+
+.navLink {
+    color: var(--color-white-dim);
+    text-decoration: none;
+    margin-right: var(--unit);
+    font-size: var(--font-size-small);
+}
+
+.navLink:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
 }

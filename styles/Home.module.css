@@ -21,7 +21,6 @@
 
 .article > p {
     font-size: var(--font-size);
-    line-height: 1.3em;
 }
 
 .article > p.customerValue {

@@ -19,19 +19,7 @@
     margin: 0;
     margin-left: var(--unit);
     border: none;
-}
-
-.sandboxCloseButton {
-    font-size: 2em;
-    background-color: transparent;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    transform: rotate(45deg);
-    transition: transform 1s;
-    margin-right: calc(var(--unit) /2);
-    text-decoration: none;
-    color: var(--color-dark-3);
+    flex: 2 0 auto;
 }
 
 @media (max-width: 700px) {

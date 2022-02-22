@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
     sandboxContainer,
     sandboxHeader,
-    sandboxCloseButton,
 } from "../styles/Sandbox.module.css";
 import Browser from "../components/Browser/Browser";
 import APIInfo from "../components/Explanation/APIInfo";
@@ -50,8 +49,11 @@ const Sandbox = function () {
         <div className={sandboxContainer}>
             <header className={sandboxHeader}>
                 <SiteTitle />
+                <Link href="/quick-start" >
+                    <a title="quick-start" className="navLink">Quick Start</a>
+                </Link>
                 <Link href="/">
-                    <a className={sandboxCloseButton}>+</a>
+                    <a className="navLink" title="return to home page">Home</a>
                 </Link>
             </header>
             <APIInfo

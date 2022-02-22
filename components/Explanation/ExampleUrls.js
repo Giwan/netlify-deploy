@@ -21,7 +21,7 @@ const ExampleUrls = function ({ url, handleUrlChange }) {
             <h3 className={exampleTitle}>Try</h3>
             <div className={buttonList}>
                 {urls.map((url) => (
-                    <button key={url} className={button} onClick={handleClick}>
+                    <button key={url} className={`${button} navLink`} onClick={handleClick}>
                         {url}
                     </button>
                 ))}

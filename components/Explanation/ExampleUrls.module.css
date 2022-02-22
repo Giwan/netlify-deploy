@@ -21,7 +21,7 @@
 }
 
 .exampleTitle {
-    color: var(--color-dark-3);
+    color: var(--color-white-dim);
 }
 
 @media (max-width: 700px) {
