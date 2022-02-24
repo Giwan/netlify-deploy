@@ -13,13 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.sandboxHeader h6 {
-    margin: 0;
-    margin-left: var(--unit);
-    border: none;
-    flex: 2 0 auto;
+    padding-left: var(--unit);
 }
 
 @media (max-width: 700px) {

@@ -4,6 +4,7 @@ import ActionComponent from "../components/ActionComponent/ActionComponent";
 import Footer from "../components/Footer/Footer";
 import HowItWorks from "../components/Explanation/HowItWorks";
 import SiteTitle from "../components/SiteTitle/SiteTitle";
+import QuickStart from "../components/QuickStart/QuickStart";
 
 export default function Home() {
     return (
@@ -34,6 +35,7 @@ export default function Home() {
                     </p>
                 </article>
             </main>
+            <QuickStart />
             <ActionComponent />
             <HowItWorks />
             <Footer />

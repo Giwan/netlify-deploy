@@ -49,9 +49,6 @@ const Sandbox = function () {
         <div className={sandboxContainer}>
             <header className={sandboxHeader}>
                 <SiteTitle />
-                <Link href="/quick-start" >
-                    <a title="quick-start" className="navLink">Quick Start</a>
-                </Link>
                 <Link href="/">
                     <a className="navLink" title="return to home page">Home</a>
                 </Link>

@@ -3,5 +3,8 @@
     text-transform: uppercase;
     border-bottom: 1px solid white;
     display: inline-block;
+    font-size: var(--font-size-small);
+    font-weight: 800;
+    text-decoration: none;
 }
 

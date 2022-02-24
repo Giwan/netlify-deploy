@@ -10,23 +10,8 @@ const ActionComponent = function () {
     return (
         <div className={actionContainer}>
             <section className={section}>
-                <header>Automation</header>
                 <p>
-                    Use the API from your existing app. You’ll receive a JSON
-                    object indicating if the site will load in an iFrame.
-                </p>
-                <Link href="/quick-start">
-                    <a className={apiButton} title="quick start guide">
-                        API Quick Start
-                    </a>
-                </Link>
-            </section>
-            <section className={section}>
-                <header>Manual</header>
-                <p>
-                    The sandbox let’s you load a given site directly into an
-                    iFrame. See detailed header information if the given site is
-                    blocked.
+                    Verify a site directly into an iFrame alongside it's JSON response.
                 </p>
                 <Link href="/sandbox">
                     <a className={sandboxButton} title="sandbox / demo page">
