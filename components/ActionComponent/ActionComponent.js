@@ -11,7 +11,7 @@ const ActionComponent = function () {
         <div className={actionContainer}>
             <section className={section}>
                 <p>
-                    Verify a site directly into an iFrame alongside it's JSON response.
+                    Verify a site directly into an iFrame alongside its JSON response.
                 </p>
                 <Link href="/sandbox">
                     <a className={sandboxButton} title="sandbox / demo page">
